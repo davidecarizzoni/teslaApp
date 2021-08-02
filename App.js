@@ -31,7 +31,16 @@ const App: () => Node = () => {
   return (
     <SafeAreaView style={[styles.container, backgroundStyle]}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <CarItem />
+      <CarItem
+        name={'Model X'}
+        tagline={'Starting from 56.800$'}
+        image={require('./src/assets/images/ModelX.jpeg')}
+      />
+      {/*<CarItem*/}
+      {/*  name={'Model S'}*/}
+      {/*  tagline={'Starting from 70.800$'}*/}
+      {/*  image={require('./src/assets/images/ModelS.jpeg')}*/}
+      {/*/>*/}
     </SafeAreaView>
   );
 };
