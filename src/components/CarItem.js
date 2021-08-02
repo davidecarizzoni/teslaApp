@@ -3,14 +3,16 @@ import {View, StyleSheet, Text, ImageBackground} from 'react-native';
 import StyledButton from './StyledButton';
 
 const CarItem = props => {
-  const {name, tagline, image} = props;
-  console.log({name, tagline, image});
+  const {name, tagline, taglineCTA, image} = props;
+  console.log({name, tagline, taglineCTA, image});
   return (
     <View style={styles.carContainer}>
       <ImageBackground source={image} style={styles.backgroundImage} />
       <View style={styles.titles}>
         <Text style={styles.title}>{name}</Text>
-        <Text style={styles.subtitle}>{tagline}</Text>
+        <Text style={styles.subtitle}>
+          {tagline} <Text style={styles.subtitleCTA}>{taglineCTA}</Text>
+        </Text>
       </View>
       <View style={styles.buttonContainer}>
         <StyledButton
@@ -56,6 +58,9 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 16,
     color: '#535353',
+  },
+  subtitleCTA: {
+    textDecorationLine: 'underline',
   },
 });
 

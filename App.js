@@ -33,7 +33,8 @@ const App: () => Node = () => {
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <CarItem
         name={'Model X'}
-        tagline={'Starting from 56.800$'}
+        tagline={'Order online for'}
+        taglineCTA={'Touchless delivery'}
         image={require('./src/assets/images/ModelX.jpeg')}
       />
       {/*<CarItem*/}
