@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, StyleSheet, Text, ImageBackground} from 'react-native';
+import StyledButton from './StyledButton';
 
 const CarItem = props => {
   return (
@@ -12,6 +13,16 @@ const CarItem = props => {
         <Text style={styles.title}> Model s</Text>
         <Text style={styles.subtitle}> Starting at 69.700$</Text>
       </View>
+      <StyledButton
+        type={'secondary'}
+        text={'custom order'}
+        onPress={() => console.log('Custom order pressed')}
+      />
+      <StyledButton
+        type={'primary'}
+        text={'Existing inventory'}
+        onPress={() => console.log('Inventory pressed')}
+      />
     </View>
   );
 };
@@ -38,7 +49,7 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 16,
-    color: '#787878',
+    color: '#535353',
   },
 });
 
