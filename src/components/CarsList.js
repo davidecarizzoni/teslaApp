@@ -37,6 +37,7 @@ const CarsList = props => {
         keyExtractor={item => item.name}
         snapToAlignment={'start'}
         decelerationRate={'fast'}
+        showsVerticalScrollIndicator={false}
         snapToInterval={Dimensions.get('window').height}
         renderItem={({item}) => <CarItem car={item} />}
       />
