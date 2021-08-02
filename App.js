@@ -19,6 +19,7 @@ import {
   ImageBackground,
 } from 'react-native';
 import CarItem from './src/components/CarItem';
+import CarsList from './src/components/CarsList';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App: () => Node = () => {
@@ -31,17 +32,13 @@ const App: () => Node = () => {
   return (
     <SafeAreaView style={[styles.container, backgroundStyle]}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <CarItem
-        name={'Model X'}
-        tagline={'Order online for'}
-        taglineCTA={'Touchless delivery'}
-        image={require('./src/assets/images/ModelX.jpeg')}
-      />
       {/*<CarItem*/}
-      {/*  name={'Model S'}*/}
-      {/*  tagline={'Starting from 70.800$'}*/}
-      {/*  image={require('./src/assets/images/ModelS.jpeg')}*/}
+      {/*  name={'Model X'}*/}
+      {/*  tagline={'Order online for'}*/}
+      {/*  taglineCTA={'Touchless delivery'}*/}
+      {/*  image={require('./src/assets/images/ModelX.jpeg')}*/}
       {/*/>*/}
+      <CarsList />
     </SafeAreaView>
   );
 };

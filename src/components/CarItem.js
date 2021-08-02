@@ -1,9 +1,15 @@
 import React from 'react';
-import {View, StyleSheet, Text, ImageBackground} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Text,
+  ImageBackground,
+  Dimensions,
+} from 'react-native';
 import StyledButton from './StyledButton';
 
 const CarItem = props => {
-  const {name, tagline, taglineCTA, image} = props;
+  const {name, tagline, taglineCTA, image} = props.car;
   console.log({name, tagline, taglineCTA, image});
   return (
     <View style={styles.carContainer}>
@@ -33,7 +39,7 @@ const CarItem = props => {
 const styles = StyleSheet.create({
   carContainer: {
     width: '100%',
-    height: '100%',
+    height: Dimensions.get('window').height, //IMPORTANT
   },
   buttonContainer: {
     position: 'absolute',
