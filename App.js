@@ -16,8 +16,9 @@ import {
   Text,
   useColorScheme,
   View,
+  ImageBackground,
 } from 'react-native';
-
+import CarItem from './src/components/CarItem';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 const App: () => Node = () => {
@@ -28,18 +29,17 @@ const App: () => Node = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView style={[styles.container, backgroundStyle]}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View style={styles.container}>
-        <Text> This is the main page</Text>
-      </View>
+      <CarItem />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    alignContent: 'center',
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
   },
 });
